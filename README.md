@@ -16,7 +16,7 @@ O projeto é uma aplicação Back-End produzida em Java, que simula um To-Do Lis
 
 ## :point_up: Como funciona?
 
-A aplicação é um To-Do List comandado por requisições HTTP, `GET`, `POST` e `PUT` através do API Dog com os dados sendo adicionados via JSON
+A aplicação é um To-Do List comandado por requisições HTTP, `GET`, `POST` e `PUT` através do API Dog com os dados sendo adicionados via JSON.
 
 Ex:
 
@@ -28,4 +28,17 @@ Ex:
 }
 ```
 
+Quando o usuário é cadastrado, os dados irão para um Entidade (Tabela) que ficará armazenada na H2 Database, acessando ela podemos realizar consultas SQL:
+
+```SQL
+SELECT * FROM TB_USERS
+```
+
+Através do API Dog também pode cadastrar tarefas, autenticando o usuário na aba de `AUTH`.
+
+É possível também através de um método GET, consultar todas as tarefas cadastradas pelo usuário (cuja autenticação esteja no `AUTH`).
+
+Utilizando um método `PUT` podemos realizar a alteração de alguma tarefa.
+
+## :computer: Utilizando o API Dog
 ---
